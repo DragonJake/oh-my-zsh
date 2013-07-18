@@ -3,4 +3,9 @@
 # Examples: http://rubyurl.com/ZXv
 #
 export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;32'
+
+if [[ "$TERM" == "xterm" ]]; then
+	export GREP_COLOR='1;38;5;226'
+else
+	export GREP_COLOR='1;33'
+fi
